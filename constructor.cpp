@@ -11,6 +11,8 @@ class Student{
     // default constructor
     Student(){
         cout<<"default constructor called"<<endl;
+        roll_no=0;
+        name="";
     } // bydeafault roll_no and name will be initialized to 0 and "" respectively
 
     //parameterized constructor
@@ -55,6 +57,7 @@ class Student{
 
     void displayAge(){
         cout<<*age<<endl; // dereference the pointer to get the value of age
+        // or cout<<*this->age<<endl; // dereference the pointer to get the value of age
     }
 
     // destructor
@@ -69,11 +72,11 @@ int main(){
     Student s1; // default constructor called
     Student s2(1, "Alice"); // parameterized constructor called // stack memory allocation
     Student s3(s2); // copy constructor called  (Student s3(s2) is same as Student s3=s2)
-    s1.display(); // returning -1352892344 
-    s1.roll_no=0; // changing roll_no of s1 to 0
-    s1.name=""; // changing name of s1 to empty string
+    s1.display(); // returning 0 and empty string 
+    s1.roll_no=1; // changing roll_no of s1 to 0
+    s1.name="rahul"; // changing name of s1 to empty string
 
-    s1.display(); // returning 0 and empty string
+    s1.display(); 
     s2.display();
     s3.display();
 
